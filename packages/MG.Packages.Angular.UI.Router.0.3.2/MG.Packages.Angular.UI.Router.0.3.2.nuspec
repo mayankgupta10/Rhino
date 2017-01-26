@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MG.Packages.Angular.UI.Router</id>
+    <version>0.3.2</version>
+    <title>Angular UI - Router (Module)</title>
+    <authors>Anant Anand Gupta</authors>
+    <owners>Anant Anand Gupta</owners>
+    <projectUrl>https://anantanandgupta.github.io/nuget-modules</projectUrl>
+    <iconUrl>https://anantanandgupta.github.io/nuget-modules/images/ui-logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Re-Package of Angular UI Modules</description>
+    <summary>A consistent packaging to reduce the confusion in the distribution of Angular UI modules.</summary>
+    <releaseNotes>Packed Version 0.3.2 of ui-router from Angular UI</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Angular-UI Router</tags>
+  </metadata>
+</package>

@@ -1,0 +1,77 @@
+﻿
+<div class="col-md-12 ">
+    <!--<section style="background:#efefe9;">
+        <div class="container">
+            <div class="row">-->
+                <div class="board">
+                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+                    <div class="board-inner">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <div class="liner"></div>
+                            <li ng-class="{active: $state.includes('manage.pilot')}">
+                                <a ui-sref="manage.pilot" data-toggle="tab" title="Pilots">
+                                    <span class="round-tabs one">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a ui-sref="manage.passenger" data-toggle="tab" title="Passengers">
+                                    <span class="round-tabs three">
+                                        <i class="glyphicon glyphicon-gift"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="manage.aeroplane" data-toggle="tab" title="Aeroplanes">
+                                    <span class="round-tabs four">
+                                        <i class="glyphicon glyphicon-plane"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="manage.setting" data-toggle="tab" title="Setting">
+                                    <span class="round-tabs five">
+                                        <i class="glyphicon glyphicon-cog"></i>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="home" ui-view="listview">
+                            <!--here load the pilotslist and crud-->
+                        </div>
+                        <div class="tab-pane fade" id="profile" ui-view="listview">
+                            <!--here load the Passengerslist and crud-->
+
+                        </div>
+                        <div class="tab-pane fade" id="messages" ui-view="listview">
+                            <!--here load the Aeroplaneslist and crud-->
+
+                        </div>
+                        <div class="tab-pane fade" id="settings" ui-view="listview">
+
+                            <!--here load the setting and crud-->
+
+                        </div>
+                       
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            <!--</div>
+        </div>
+    </section>-->
+
+    </div>
+
+    <script>
+
+        $(function () {
+            $('a[title]').tooltip();
+        });
+
+
+    </script>

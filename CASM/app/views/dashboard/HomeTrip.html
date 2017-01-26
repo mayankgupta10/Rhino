@@ -1,0 +1,125 @@
+﻿
+    <div class="col-md-3 ">
+        <div class="panel panel-default" style="padding:15px">
+            <div class="panel panel-info">
+                <div class="panel-heading">Add Trip</div>
+                <div class="panel-body">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Tittle</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-tag aria-hidden=" true"></i></span>
+                                    <input type="text" class="form-control" ng-model="trip.Tittle" placeholder="Appears On Calender" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Date</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group date" data-provide="datepicker">
+                                    <input type="text" ng-model="trip.Date" class="form-control datepicker" placeholder="Trip Date">
+                                    <div class="form-group input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!--<div class="input-group">
+                                    <input type="text" class="form-control" ng-model="trip.Date" placeholder="Trip Date" />
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar aria-hidden=" true"></i></span>
+
+                                </div>-->
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Destination</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-road aria-hidden=" true"></i></span>
+                                    <input name="destinationin" type="text" ng-model="trip.Destination" id="locationautocomplete" placeholder="Where Ya Going?" class="form-control">
+                                    <!--<input vs-google-autocomplete ng-model="destination" name="destination" type="text" class="form-control" placeholder="Where You going?">-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Aeroplane</label>
+                            <div class="cols-sm-10">
+                                <select class="form-control" ng-model="trip.Aeroplane" ng-options="aeroplane.Name for aeroplane in aeroplanesList">
+                                    <option value="" label="--select aeroplane--"></option>
+                                </select>
+                                    <!--<input type="text" class="form-control" ng-model="trip.Aeroplane" placeholder="Enter your Username" />-->
+                                    <!--<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down aria-hidden=" true"></i></span>-->
+
+                             
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <button type="submit" ng-click="AddTrip(trip)" class="btn btn-success btn-md btn-block login-button">Add Trip</button>
+                        </div>
+                    </form>
+                         </div>
+            </div>
+        </div>
+        </div>
+
+
+                <!--trip pannels ends-->
+
+      <div class="col-md-9">
+          <div class="col-md-11 ">
+ 
+                           <div  ui-calendar="uiConfig.calendar" ng-model="eventSources" ></div>
+  
+            </div>
+</div>
+          
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxWauyjblKzH_7ZvOGr-aehYWt06cB94&libraries=places&callback=initAutocomplete" async defer></script>
+
+<script>
+    var placeSearch, locationautocomplete;
+    var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+    };
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        locationautocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('locationautocomplete')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        locationautocomplete.addListener('place_changed', fillInAddress);
+    }
+
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                locationautocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+    </script>

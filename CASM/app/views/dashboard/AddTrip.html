@@ -1,0 +1,150 @@
+﻿<div class="col-md-3">
+    <div class="panel panel-default" style="padding:15px">
+        <div class="panel panel-info">
+            <div class="panel-heading">Trip info</div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Trip Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tag aria-hidden=" true"></i></span>
+                            <input type="text" class="form-control" ng-model="addTrip.Tittle"  placeholder="Appears On Calender" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Aeroplane</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="addTrip.Aeroplane" placeholder="Enter your Username" />
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down aria-hidden=" true"></i></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Status</label>
+                    <div class="cols-sm-10">
+                       
+                            <select class="form-control" ng-model="addTrip.Status" >
+                                <option value="" label="----status----"></option>
+                                 <option value="1" label="Available"></option>
+                                <option value="2" label="Cancelled"></option>
+                            </select>
+
+                            <!--<input type="text" class="form-control" ng-model="addTrip.Status" placeholder="Enter your Username" />
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down aria-hidden=" true"></i></span>-->
+
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <button type="button" class="btn btn-success btn-md btn-block login-button">Add Stop</button>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">Add Stops</div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Locations</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter a location" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Passengers</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Add Passengers" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-md btn-block login-button">Add Passenger</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="form-group ">
+            <button type="button" class="btn btn-danger btn-md btn-block login-button">Delete Trip</button>
+        </div>
+
+    </div>
+    </div>
+
+
+
+<div class="col-md-9 ">
+    <div class="col-md-12 ">
+
+        
+
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="legend">
+                            <legend style="font-size:1.3em;">Edit Trip</legend>
+                        </div>
+
+
+
+                            <uib-accordion close-others="oneAtATime">
+                                <div uib-accordion-group class="panel-default" is-open="status.open">
+                                    <uib-accordion-heading>
+                                        Arrival Location <i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                    </uib-accordion-heading>
+                                    Arrival Location Name details
+                                </div>
+                            </uib-accordion>
+
+                            <uib-accordion close-others="oneAtATime">
+                                <div uib-accordion-group class="panel-default" is-open="status.open">
+                                    <uib-accordion-heading>
+                                        Destination Location <i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                    </uib-accordion-heading>
+                                    Destination Location Details
+                                </div>
+                            </uib-accordion>
+
+</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--<div class="panel panel-info">
+            <div class="panel-heading">Edit Trip</div>
+            <div class="panel-body">
+
+               
+
+
+
+
+
+                </div>
+            </div>-->
+
+            </div>
+
+
+        </div>
